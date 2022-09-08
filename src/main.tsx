@@ -2,10 +2,11 @@ import * as React from 'react'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'emotion-theming'
 import { ConnectedRouter } from 'connected-react-router'
-import LayoutContainer from './containers/LayoutContainer'
+import LayoutContainer from './layout/LayoutContainer'
+import LayoutContent from './layout/LayoutContent'
 import * as themes from './assets/styles/theme'
 import { InterfaceMainProps } from './interfaces'
-import Routes from './routes'
+import routeData, { renderRoutes } from './routes'
 import './assets/style.css'
 
 // Create an intersection type of the component props and our Redux props.
@@ -16,7 +17,7 @@ const Main: React.FC<InterfaceMainProps> = ({ store, history }) => {
         <LayoutContainer>
           {({ theme }) => (
             <ThemeProvider theme={themes[theme]}>
-              <Routes />
+              <LayoutContent>{renderRoutes(routeData)}</LayoutContent>
             </ThemeProvider>
           )}
         </LayoutContainer>
