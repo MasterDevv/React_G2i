@@ -36,7 +36,6 @@
     "eject": "react-scripts eject",
     "postinstall":"tsc"
   },
-  "postinstall":"tsc",
   "browserslist": {
     "development": [
       "last 2 chrome versions",
