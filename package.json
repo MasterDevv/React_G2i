@@ -25,7 +25,25 @@
     "redux-saga": "^1.0.5",
     "typeface-ibm-plex-mono": "^0.0.61",
     "typeface-ibm-plex-sans": "^0.0.75",
-    "typesafe-actions": "^4.4.2"
+    "typesafe-actions": "^4.4.2",
+    "@types/history": "^4.7.3",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.3",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.2",
+    "@types/react-router-dom": "^4.3.5",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "babel-plugin-emotion": "^10.0.16",
+    "eslint": "^6.2.2",
+    "eslint-config-blvd": "^1.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-jest": "^22.16.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "react-scripts": "^3.1.1",
+    "typescript": "~3.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,25 +69,5 @@
   },
   "engines":{
     "node":"16.17.0"
-  },
-  "devDependencies": {
-    "@types/history": "^4.7.3",
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.3",
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "@types/react-redux": "^7.1.2",
-    "@types/react-router-dom": "^4.3.5",
-    "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
-    "babel-plugin-emotion": "^10.0.16",
-    "eslint": "^6.2.2",
-    "eslint-config-blvd": "^1.0.0",
-    "eslint-config-prettier": "^6.1.0",
-    "eslint-plugin-jest": "^22.16.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2",
-    "react-scripts": "^3.1.1",
-    "typescript": "~3.5.3"
   }
 }
