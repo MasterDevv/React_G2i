@@ -1,31 +1,16 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import { connect } from 'react-redux'
 import Button from '@material-ui/core/Button'
-import { RouteComponentProps } from 'react-router'
 import LoadingOverlay from '../../components/Loading/LoadingOverlay'
 import LoadingOverlayInner from '../../components/Loading/LoadingOverlayInner'
 import LoadingSpinner from '../../components/Loading/LoadingSpinner'
 import { ApplicationState } from '../../redux'
-import { Quiz } from '../../redux/quiz/types'
 import { fetchRequest, answerSet } from '../../redux/quiz/actions'
 import PageHeader from '../../components/Page/PageHeader'
 import PageContent from '../../components/Page/PageContent'
+import { IQuizes } from '../../interfaces'
 
-interface PropsFromState {
-  loading: boolean
-  data: Quiz[]
-  errors?: string
-}
-
-interface PropsFromDispatch {
-  fetchRequest: typeof fetchRequest
-  answerSet: typeof answerSet
-}
-
-type AllProps = PropsFromState & PropsFromDispatch
-interface Quizes extends RouteComponentProps, AllProps { }
-
-const Quizes: React.FC<Quizes> = (props: Quizes) => {
+const Quizes: React.FC<IQuizes> = (props: IQuizes) => {
   const { loading, data } = props
   const [id, setId] = useState(0)
   const [correctId, setCorrectId] = useState([-1])

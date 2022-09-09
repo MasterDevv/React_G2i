@@ -1,8 +1,5 @@
 import React from 'react'
-
-interface IPageText {
-  text: string
-}
+import { IPageText } from '../../interfaces'
 
 function PageContent(props: IPageText) {
   return (

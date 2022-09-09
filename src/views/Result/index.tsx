@@ -1,31 +1,16 @@
 import React, { useEffect, useMemo } from 'react'
 import { connect } from 'react-redux'
 import Button from '@material-ui/core/Button'
-import { RouteComponentProps } from 'react-router'
 import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline'
 import LoadingOverlay from '../../components/Loading/LoadingOverlay'
 import LoadingOverlayInner from '../../components/Loading/LoadingOverlayInner'
 import LoadingSpinner from '../../components/Loading/LoadingSpinner'
 import { ApplicationState } from '../../redux'
-import { Quiz } from '../../redux/quiz/types'
 import { fetchRequest } from '../../redux/quiz/actions'
+import { IQuizes } from '../../interfaces'
 
-interface PropsFromState {
-  loading: boolean
-  data: Quiz[]
-  answer: number[]
-  errors?: string
-}
-
-interface PropsFromDispatch {
-  fetchRequest: typeof fetchRequest
-}
-
-type AllProps = PropsFromState & PropsFromDispatch
-interface Result extends RouteComponentProps, AllProps { }
-
-const Result: React.FC<Result> = (props: Result) => {
+const Result: React.FC<IQuizes> = (props: IQuizes) => {
   const { loading, data, answer } = props
   const { fetchRequest: fr } = props
   useEffect(() => {

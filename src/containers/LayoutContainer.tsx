@@ -3,20 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { ApplicationState } from '../redux'
 import { ThemeColors } from '../redux/layout'
 import * as layoutActions from '../redux/layout/actions'
+import { ILayoutContainerRenderProps } from '../interfaces'
 
-// Redux-specific props.
-interface LayoutContainerProps {
-  theme: ThemeColors
-  setTheme: (theme: ThemeColors) => void
-}
-
-// Wrapper props for render/children callback.
-interface LayoutContainerRenderProps {
-  render?: (props: LayoutContainerProps) => React.ReactElement
-  children?: (props: LayoutContainerProps) => React.ReactElement
-}
-
-const LayoutContainer: React.FC<LayoutContainerRenderProps> = ({ render, children }) => {
+const LayoutContainer: React.FC<ILayoutContainerRenderProps> = ({ render, children }) => {
   // We can use Hooks to call in our selector/dispatch functions.
   const { theme } = useSelector((state: ApplicationState) => state.layout)
   const dispatch = useDispatch()
