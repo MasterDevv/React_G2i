@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { Route, BrowserRouter } from 'react-router-dom'
 import { Global } from '@emotion/core'
-import Header from './components/layout/Header'
-import Home from './pages/Home'
-import Quizes from './pages/Quizes'
-import Result from './pages/Result'
-import normalize from './styles/normalize'
-import globals from './styles/globals'
+import Header from '../layout/Header'
+import Home from '../views/Home'
+import Quizes from '../views/Quizes'
+import Result from '../views/Result'
+import normalize from '../assets/styles/normalize'
+import globals from '../assets/styles/globals'
 
 const Routes: React.SFC = () => (
   <div className="panel panel--perma">

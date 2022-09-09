@@ -1,16 +1,16 @@
-import { lighten } from 'polished'
-import { Theme } from '../../utils/styled'
+import { darken } from 'polished'
+import { Theme } from '../../../utils/styled'
 import brandColors from '../colors/brandColors'
 
 const lightTheme: Theme = {
   colors: {
-    background: brandColors.gray75,
-    body: brandColors.gray10,
-    headings: brandColors.gray5,
+    background: brandColors.gray5,
+    body: brandColors.gray75,
+    headings: brandColors.black,
     black: brandColors.black,
     white: brandColors.white,
-    borders: lighten(0.05, brandColors.gray75),
-    tableOdd: lighten(0.025, brandColors.gray75),
+    borders: darken(0.05, brandColors.gray5),
+    tableOdd: darken(0.025, brandColors.gray5),
     brand: brandColors.red,
     attrs: {
       str: '#f44336',
@@ -21,11 +21,11 @@ const lightTheme: Theme = {
   fonts: {
     headings:
       // eslint-disable-next-line max-len
-      '',
+      "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,  Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif",
     body:
       // eslint-disable-next-line max-len
-      '-apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
-    monospace: ''
+      '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif',
+    monospace: "'IBM Plex Mono', Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace, monospace"
   },
   fontSizes: {
     h1: '2.441rem',

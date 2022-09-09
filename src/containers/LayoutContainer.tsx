@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { ApplicationState } from '../store'
-import { ThemeColors } from '../store/layout'
-import * as layoutActions from '../store/layout/actions'
+import { ApplicationState } from '../redux'
+import { ThemeColors } from '../redux/layout'
+import * as layoutActions from '../redux/layout/actions'
 
 // Redux-specific props.
 interface LayoutContainerProps {

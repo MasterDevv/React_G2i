@@ -4,12 +4,12 @@ import Button from '@material-ui/core/Button'
 import { RouteComponentProps } from 'react-router'
 import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline'
-import LoadingOverlay from '../../components/data/LoadingOverlay'
-import LoadingOverlayInner from '../../components/data/LoadingOverlayInner'
-import LoadingSpinner from '../../components/data/LoadingSpinner'
-import { ApplicationState } from '../../store'
-import { Quiz } from '../../store/quiz/types'
-import { fetchRequest } from '../../store/quiz/actions'
+import LoadingOverlay from '../../components/Loading/LoadingOverlay'
+import LoadingOverlayInner from '../../components/Loading/LoadingOverlayInner'
+import LoadingSpinner from '../../components/Loading/LoadingSpinner'
+import { ApplicationState } from '../../redux'
+import { Quiz } from '../../redux/quiz/types'
+import { fetchRequest } from '../../redux/quiz/actions'
 
 interface PropsFromState {
   loading: boolean
