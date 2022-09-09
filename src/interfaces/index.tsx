@@ -41,5 +41,11 @@ export interface InterfaceCommonPropsFromDispatch {
   answerSet: typeof answerSet
 }
 
+export interface InterfaceRoute {
+  exact?: boolean
+  path?: string
+  component: any
+}
+
 type IAllProps = InterfaceCommonPropsFromState & InterfaceCommonPropsFromDispatch
 export interface InterfaceCommon extends RouteComponentProps, IAllProps { }
