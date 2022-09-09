@@ -1,7 +1,7 @@
 import React from 'react'
-import { IPageText } from '../../interfaces'
+import { InterfacePageText } from '../../interfaces'
 
-function PageHeader(props: IPageText) {
+function PageHeader(props: InterfacePageText) {
   return (
     <div className="pageHeader">
       <h1>{props.text}</h1>

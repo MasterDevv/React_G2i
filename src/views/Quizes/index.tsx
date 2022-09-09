@@ -8,9 +8,9 @@ import { ApplicationState } from '../../redux'
 import { fetchRequest, answerSet } from '../../redux/quiz/actions'
 import PageHeader from '../../components/Page/PageHeader'
 import PageContent from '../../components/Page/PageContent'
-import { IQuizes } from '../../interfaces'
+import { InterfaceCommon } from '../../interfaces'
 
-const Quizes: React.FC<IQuizes> = (props: IQuizes) => {
+const Quizes: React.FC<InterfaceCommon> = (props: InterfaceCommon) => {
   const { loading, data } = props
   const [id, setId] = useState(0)
   const [correctId, setCorrectId] = useState([-1])

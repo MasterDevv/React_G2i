@@ -4,12 +4,12 @@ import { ThemeProvider } from 'emotion-theming'
 import { ConnectedRouter } from 'connected-react-router'
 import LayoutContainer from './containers/LayoutContainer'
 import * as themes from './assets/styles/theme'
-import { IMainProps } from './interfaces'
+import { InterfaceMainProps } from './interfaces'
 import Routes from './routes'
 import './assets/style.css'
 
 // Create an intersection type of the component props and our Redux props.
-const Main: React.FC<IMainProps> = ({ store, history }) => {
+const Main: React.FC<InterfaceMainProps> = ({ store, history }) => {
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>

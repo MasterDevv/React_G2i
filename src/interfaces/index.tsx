@@ -7,39 +7,39 @@ import { ThemeColors } from '../redux/layout'
 import { Quiz } from '../redux/quiz/types'
 import { fetchRequest, answerSet } from '../redux/quiz/actions'
 
-export interface IPageText {
+export interface InterfacePageText {
   text: string
 }
 
-export interface IMainProps {
+export interface InterfaceMainProps {
   store: Store<ApplicationState>
   history: History
 }
 
 // Redux-specific props.
-export interface ILayoutContainerProps {
+export interface InterfaceLayoutProps {
   theme: ThemeColors
   setTheme: (theme: ThemeColors) => void
 }
 
 // Wrapper props for render/children callback.
-export interface ILayoutContainerRenderProps {
-  render?: (props: ILayoutContainerProps) => React.ReactElement
-  children?: (props: ILayoutContainerProps) => React.ReactElement
+export interface InterfaceLayoutRenderProps {
+  render?: (props: InterfaceLayoutProps) => React.ReactElement
+  children?: (props: InterfaceLayoutProps) => React.ReactElement
 }
 
 // interface Quiz
-export interface IQuizPropsFromState {
+export interface InterfaceCommonPropsFromState {
   loading: boolean
   data: Quiz[]
   answer: number[]
   errors?: string
 }
 
-export interface IQuizPropsFromDispatch {
+export interface InterfaceCommonPropsFromDispatch {
   fetchRequest: typeof fetchRequest
   answerSet: typeof answerSet
 }
 
-type IAllProps = IQuizPropsFromState & IQuizPropsFromDispatch
-export interface IQuizes extends RouteComponentProps, IAllProps { }
+type IAllProps = InterfaceCommonPropsFromState & InterfaceCommonPropsFromDispatch
+export interface InterfaceCommon extends RouteComponentProps, IAllProps { }

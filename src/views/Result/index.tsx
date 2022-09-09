@@ -8,9 +8,9 @@ import LoadingOverlayInner from '../../components/Loading/LoadingOverlayInner'
 import LoadingSpinner from '../../components/Loading/LoadingSpinner'
 import { ApplicationState } from '../../redux'
 import { fetchRequest } from '../../redux/quiz/actions'
-import { IQuizes } from '../../interfaces'
+import { InterfaceCommon } from '../../interfaces'
 
-const Result: React.FC<IQuizes> = (props: IQuizes) => {
+const Result: React.FC<InterfaceCommon> = (props: InterfaceCommon) => {
   const { loading, data, answer } = props
   const { fetchRequest: fr } = props
   useEffect(() => {
